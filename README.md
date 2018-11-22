@@ -1,5 +1,5 @@
 # Timer
-Timer library for Arduino
+(Another) Timer library for Arduino. Mainly wrote for myself to improve my Github skills, and to make my first Arduino library but feel free to use it (and adapt it) if you want to!
 
 ## Installation and download
 
