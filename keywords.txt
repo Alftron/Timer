@@ -1,0 +1,28 @@
+#######################################
+# Syntax Coloring Map For Timer
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Timer	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+attach  KEYWORD2
+setIntervals	KEYWORD2
+setOnInterval	KEYWORD2
+setOffInterval	KEYWORD2
+setTimeFormat	KEYWORD2
+update	KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
