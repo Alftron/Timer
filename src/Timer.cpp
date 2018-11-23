@@ -53,20 +53,23 @@ inline void Timer::changeState()
     digitalWrite(pin, state);
 }
 
-inline unsigned long Timer::convmintoMilliseconds(int timeToConvert)
+inline unsigned long Timer::convtoMilliseconds(int timeToConvert)
 {
     /**
-     * Private function: Convert the time given (in minutes/int) and return as milliseconds as unsigned long
+     * Private function: Convert the time given and return as milliseconds as unsigned long
     */
-    return timeToConvert * 60000L;
-}
-
-inline unsigned long Timer::convsectoMilliseconds(int timeToConvert)
-{
-    /**
-     * Private function: Convert the time given (in minutes/int) and return as milliseconds as unsigned long
-    */
-    return timeToConvert * 1000L;
+   switch (enTimeFormat)
+    {
+        case MINUTES:
+            return timeToConvert * 60000L;
+            break;
+        case SECONDS:
+            return timeToConvert * 1000L;
+            break;
+        default:
+            return timeToConvert;
+            break;
+    } 
 }
 
 void Timer::setOffTime(unsigned long offTime)
@@ -77,10 +80,8 @@ void Timer::setOffTime(unsigned long offTime)
     switch (enTimeFormat)
     {
         case MINUTES:
-            this->offTime = convmintoMilliseconds(offTime);
-            break;
         case SECONDS:
-            this->offTime = convsectoMilliseconds(offTime);
+            this->offTime = convtoMilliseconds(offTime);
             break;
         default:
             this->offTime = offTime;
@@ -96,10 +97,8 @@ void Timer::setOnTime(unsigned long onTime)
     switch (enTimeFormat)
     {
         case MINUTES:
-            this->onTime = convmintoMilliseconds(onTime);
-            break;
         case SECONDS:
-            this->onTime = convsectoMilliseconds(onTime);
+            this->onTime = convtoMilliseconds(onTime);
             break;
         default:
             this->onTime = onTime;
@@ -118,17 +117,14 @@ void Timer::setTimeFormat(TimeUnit enTimeFormat)
     switch (enTimeFormat)
     {        
         case MINUTES:
-            this->offTime = convmintoMilliseconds(this->offTime);
-            this->onTime = convmintoMilliseconds(this->onTime);
-            break;
         case SECONDS:
-            this->offTime = convsectoMilliseconds(this->offTime);
-            this->onTime = convsectoMilliseconds(this->onTime);
+            this->offTime = convtoMilliseconds(this->offTime);
+            this->onTime = convtoMilliseconds(this->onTime);
             break;
         default:
+            this->offTime = offTime;
             this->onTime = onTime;
             break;
-
     }
 }
 
@@ -140,12 +136,9 @@ void Timer::setTimer(unsigned long offTime, unsigned long onTime)
     switch (enTimeFormat)
     {
         case MINUTES:
-            this->offTime = convmintoMilliseconds(offTime);
-            this->onTime = convmintoMilliseconds(onTime);
-            break;
         case SECONDS:
-            this->offTime = convsectoMilliseconds(offTime);
-            this->onTime = convsectoMilliseconds(onTime);
+            this->offTime = convtoMilliseconds(offTime);
+            this->onTime = convtoMilliseconds(onTime);
             break;
         default:
             this->offTime = offTime;

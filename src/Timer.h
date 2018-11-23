@@ -68,8 +68,7 @@ class Timer
    private:
       unsigned long prevSwitchTime;
       inline void changeState();
-      inline unsigned long convmintoMilliseconds(int timeToConvert);
-      inline unsigned long convsectoMilliseconds(int timeToConvert);
+      inline unsigned long convtoMilliseconds(int timeToConvert);
     
 };
 
