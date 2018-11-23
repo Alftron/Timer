@@ -1,0 +1,131 @@
+\hypertarget{class_timer}{}\section{Timer Class Reference}
+\label{class_timer}\index{Timer@{Timer}}
+
+
+{\ttfamily \#include $<$Timer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_timer_a5f16e8da27d2a5a5242dead46de05d97}{Timer} ()
+\item 
+void \hyperlink{class_timer_a74db93921810ee98d337ed3cdc2bc513}{attach} (int \hyperlink{class_timer_a1452d92813046e6badb287f30789580e}{pin})
+\item 
+void \hyperlink{class_timer_ac780d2ae2072d2d2be6bdc8bcc0a3acc}{attach} (int \hyperlink{class_timer_a1452d92813046e6badb287f30789580e}{pin}, \hyperlink{_timer_8h_add9fe45e09605eee3e4a39c8a5c4476d}{Time\+Unit} \hyperlink{class_timer_a420f780693d99cab0cad9ae8202d834e}{en\+Time\+Format})
+\item 
+void \hyperlink{class_timer_a1a3d438cfafc29ab392e68eeea8c1952}{set\+Timer} (unsigned long \hyperlink{class_timer_a884fa0db2b95029da69e11fbb53612b2}{off\+Time}, unsigned long \hyperlink{class_timer_afa967387e3e6c7506334fcd886ea152a}{on\+Time})
+\item 
+void \hyperlink{class_timer_a3ec9029748dc5408795d59841497a254}{set\+On\+Time} (unsigned long \hyperlink{class_timer_afa967387e3e6c7506334fcd886ea152a}{on\+Time})
+\item 
+void \hyperlink{class_timer_a47474fcf4efcc8dfd7540b1a7b80b4ce}{set\+Off\+Time} (unsigned long \hyperlink{class_timer_a884fa0db2b95029da69e11fbb53612b2}{off\+Time})
+\item 
+void \hyperlink{class_timer_af8a1b1c47ee6812ddb29cd83deafaf36}{set\+Time\+Format} (\hyperlink{_timer_8h_add9fe45e09605eee3e4a39c8a5c4476d}{Time\+Unit} \hyperlink{class_timer_a420f780693d99cab0cad9ae8202d834e}{en\+Time\+Format})
+\item 
+void \hyperlink{class_timer_a745ad59b5a46744cd871a1129a25d74f}{update} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{class_timer_a1452d92813046e6badb287f30789580e}{pin}
+\item 
+uint8\+\_\+t \hyperlink{class_timer_a436bf19bc3bd3dc1c07751adbc1dbe42}{state}
+\item 
+unsigned long \hyperlink{class_timer_afa967387e3e6c7506334fcd886ea152a}{on\+Time}
+\item 
+unsigned long \hyperlink{class_timer_a884fa0db2b95029da69e11fbb53612b2}{off\+Time}
+\item 
+\hyperlink{_timer_8h_add9fe45e09605eee3e4a39c8a5c4476d}{Time\+Unit} \hyperlink{class_timer_a420f780693d99cab0cad9ae8202d834e}{en\+Time\+Format}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_timer_a5f16e8da27d2a5a5242dead46de05d97}{}\label{class_timer_a5f16e8da27d2a5a5242dead46de05d97} 
+\index{Timer@{Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{Timer()}{Timer()}}
+{\footnotesize\ttfamily Timer\+::\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor -\/ provides default values of state(0), off\+Time(0), pin(0), en\+Time\+Format(\+M\+I\+L\+L\+I\+S\+E\+C\+O\+N\+D\+S) 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_timer_a74db93921810ee98d337ed3cdc2bc513}{}\label{class_timer_a74db93921810ee98d337ed3cdc2bc513} 
+\index{Timer@{Timer}!attach@{attach}}
+\index{attach@{attach}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{attach()}{attach()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Timer\+::attach (\begin{DoxyParamCaption}\item[{int}]{pin }\end{DoxyParamCaption})}
+
+Attach the timer to a pin without specifying unit of time (default milliseconds)\hypertarget{class_timer_ac780d2ae2072d2d2be6bdc8bcc0a3acc}{}\label{class_timer_ac780d2ae2072d2d2be6bdc8bcc0a3acc} 
+\index{Timer@{Timer}!attach@{attach}}
+\index{attach@{attach}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{attach()}{attach()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Timer\+::attach (\begin{DoxyParamCaption}\item[{int}]{pin,  }\item[{\hyperlink{_timer_8h_add9fe45e09605eee3e4a39c8a5c4476d}{Time\+Unit}}]{en\+Time\+Format }\end{DoxyParamCaption})}
+
+Attach the timer to a pin and specify the unit of time (M\+I\+L\+L\+I\+S\+E\+C\+O\+N\+DS, S\+E\+C\+O\+N\+DS, M\+I\+N\+U\+T\+ES)\hypertarget{class_timer_a47474fcf4efcc8dfd7540b1a7b80b4ce}{}\label{class_timer_a47474fcf4efcc8dfd7540b1a7b80b4ce} 
+\index{Timer@{Timer}!set\+Off\+Time@{set\+Off\+Time}}
+\index{set\+Off\+Time@{set\+Off\+Time}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{set\+Off\+Time()}{setOffTime()}}
+{\footnotesize\ttfamily void Timer\+::set\+Off\+Time (\begin{DoxyParamCaption}\item[{unsigned long}]{off\+Time }\end{DoxyParamCaption})}
+
+Set the off time\hypertarget{class_timer_a3ec9029748dc5408795d59841497a254}{}\label{class_timer_a3ec9029748dc5408795d59841497a254} 
+\index{Timer@{Timer}!set\+On\+Time@{set\+On\+Time}}
+\index{set\+On\+Time@{set\+On\+Time}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{set\+On\+Time()}{setOnTime()}}
+{\footnotesize\ttfamily void Timer\+::set\+On\+Time (\begin{DoxyParamCaption}\item[{unsigned long}]{on\+Time }\end{DoxyParamCaption})}
+
+Set the on time\hypertarget{class_timer_af8a1b1c47ee6812ddb29cd83deafaf36}{}\label{class_timer_af8a1b1c47ee6812ddb29cd83deafaf36} 
+\index{Timer@{Timer}!set\+Time\+Format@{set\+Time\+Format}}
+\index{set\+Time\+Format@{set\+Time\+Format}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{set\+Time\+Format()}{setTimeFormat()}}
+{\footnotesize\ttfamily void Timer\+::set\+Time\+Format (\begin{DoxyParamCaption}\item[{\hyperlink{_timer_8h_add9fe45e09605eee3e4a39c8a5c4476d}{Time\+Unit}}]{en\+Time\+Format }\end{DoxyParamCaption})}
+
+Set if the timer is running in M\+I\+L\+L\+I\+S\+E\+C\+O\+N\+DS, S\+E\+C\+O\+N\+DS or M\+I\+N\+U\+T\+ES\hypertarget{class_timer_a1a3d438cfafc29ab392e68eeea8c1952}{}\label{class_timer_a1a3d438cfafc29ab392e68eeea8c1952} 
+\index{Timer@{Timer}!set\+Timer@{set\+Timer}}
+\index{set\+Timer@{set\+Timer}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{set\+Timer()}{setTimer()}}
+{\footnotesize\ttfamily void Timer\+::set\+Timer (\begin{DoxyParamCaption}\item[{unsigned long}]{off\+Time,  }\item[{unsigned long}]{on\+Time }\end{DoxyParamCaption})}
+
+Set both the off and on times\hypertarget{class_timer_a745ad59b5a46744cd871a1129a25d74f}{}\label{class_timer_a745ad59b5a46744cd871a1129a25d74f} 
+\index{Timer@{Timer}!update@{update}}
+\index{update@{update}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Timer\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Update/poll the timer(s) to see if we should toggle the pin or not
+
+\subsection{Member Data Documentation}
+\hypertarget{class_timer_a420f780693d99cab0cad9ae8202d834e}{}\label{class_timer_a420f780693d99cab0cad9ae8202d834e} 
+\index{Timer@{Timer}!en\+Time\+Format@{en\+Time\+Format}}
+\index{en\+Time\+Format@{en\+Time\+Format}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{en\+Time\+Format}{enTimeFormat}}
+{\footnotesize\ttfamily \hyperlink{_timer_8h_add9fe45e09605eee3e4a39c8a5c4476d}{Time\+Unit} Timer\+::en\+Time\+Format\hspace{0.3cm}{\ttfamily [protected]}}
+
+Enumerator for the unit of time (M\+I\+L\+L\+I\+S\+E\+C\+O\+N\+DS, S\+E\+C\+O\+N\+DS or M\+I\+N\+U\+T\+ES) \hypertarget{class_timer_a884fa0db2b95029da69e11fbb53612b2}{}\label{class_timer_a884fa0db2b95029da69e11fbb53612b2} 
+\index{Timer@{Timer}!off\+Time@{off\+Time}}
+\index{off\+Time@{off\+Time}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{off\+Time}{offTime}}
+{\footnotesize\ttfamily unsigned long Timer\+::off\+Time\hspace{0.3cm}{\ttfamily [protected]}}
+
+Holds the time the pin will be off for \hypertarget{class_timer_afa967387e3e6c7506334fcd886ea152a}{}\label{class_timer_afa967387e3e6c7506334fcd886ea152a} 
+\index{Timer@{Timer}!on\+Time@{on\+Time}}
+\index{on\+Time@{on\+Time}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{on\+Time}{onTime}}
+{\footnotesize\ttfamily unsigned long Timer\+::on\+Time\hspace{0.3cm}{\ttfamily [protected]}}
+
+Holds the time the pin will be on for \hypertarget{class_timer_a1452d92813046e6badb287f30789580e}{}\label{class_timer_a1452d92813046e6badb287f30789580e} 
+\index{Timer@{Timer}!pin@{pin}}
+\index{pin@{pin}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{pin}{pin}}
+{\footnotesize\ttfamily uint8\+\_\+t Timer\+::pin\hspace{0.3cm}{\ttfamily [protected]}}
+
+Holds the Arduino pin number that will be used with the timer \hypertarget{class_timer_a436bf19bc3bd3dc1c07751adbc1dbe42}{}\label{class_timer_a436bf19bc3bd3dc1c07751adbc1dbe42} 
+\index{Timer@{Timer}!state@{state}}
+\index{state@{state}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily uint8\+\_\+t Timer\+::state\hspace{0.3cm}{\ttfamily [protected]}}
+
+Holds the state of the Arduino pin (0 for L\+OW, 1 for H\+I\+GH) 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_timer_8h}{Timer.\+h}\item 
+src/\hyperlink{_timer_8cpp}{Timer.\+cpp}\end{DoxyCompactItemize}

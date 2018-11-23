@@ -12,10 +12,22 @@
 #include "WProgram.h"
 #endif
 
+/**
+   * Enumerator for the unit of time (MILLISECONDS, SECONDS or MINUTES)
+*/
 enum TimeUnit
 {
+   /**
+      * Specify time in milliseconds
+   */
    MILLISECONDS = 0,
+   /**
+      * Specify time in seconds
+   */
    SECONDS,
+   /**
+      * Specify time in minutes
+   */
    MINUTES
 };
 
@@ -25,24 +37,39 @@ class Timer
       Timer();
       void attach(int pin);
       void attach(int pin, TimeUnit enTimeFormat);
-      void setIntervals(unsigned long offInterval, unsigned long onInterval);
-      void setOnInterval(unsigned long onInterval);
-      void setOffInterval(unsigned long offInterval);
+      void setTimer(unsigned long offTime, unsigned long onTime);
+      void setOnTime(unsigned long onTime);
+      void setOffTime(unsigned long offTime);
       void setTimeFormat(TimeUnit enTimeFormat);
       void update();
 
    protected:
+      /**
+         * Holds the Arduino pin number that will be used with the timer
+      */
       uint8_t pin;
+      /**
+         * Holds the state of the Arduino pin (0 for LOW, 1 for HIGH)
+      */
       uint8_t state;
-      unsigned long onInterval;
-      unsigned long offInterval;
-      unsigned long prevSwitchTime;
+      /**
+         * Holds the time the pin will be on for
+      */
+      unsigned long onTime;
+      /**
+         * Holds the time the pin will be off for
+      */
+      unsigned long offTime;
+      /**
+         * Enumerator for the unit of time (MILLISECONDS, SECONDS or MINUTES)
+      */
       TimeUnit enTimeFormat;
 
    private:
+      unsigned long prevSwitchTime;
       inline void changeState();
-      inline unsigned long convmintoMilliseconds(int interval);
-      inline unsigned long convsectoMilliseconds(int interval);
+      inline unsigned long convmintoMilliseconds(int timeToConvert);
+      inline unsigned long convsectoMilliseconds(int timeToConvert);
     
 };
 

@@ -12,9 +12,9 @@ Timer	KEYWORD1
 # Methods and Functions (KEYWORD2)
 #######################################
 attach  KEYWORD2
-setIntervals	KEYWORD2
-setOnInterval	KEYWORD2
-setOffInterval	KEYWORD2
+setTimer	KEYWORD2
+setOffTime	KEYWORD2
+setOnTime	KEYWORD2
 setTimeFormat	KEYWORD2
 update	KEYWORD2
 
