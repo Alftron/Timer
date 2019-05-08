@@ -1,6 +1,6 @@
 {
   "name": "Timer",
-  "keywords": "timer, signal, input, ouput",
+  "keywords": "timer, signal, input, output",
   "description": "Timer library for Arduino",
   "repository": {
     "type": "git",
