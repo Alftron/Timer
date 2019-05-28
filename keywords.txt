@@ -11,7 +11,7 @@ Timer	KEYWORD1
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-attach  KEYWORD2
+attach	KEYWORD2
 setTimer	KEYWORD2
 setOffTime	KEYWORD2
 setOnTime	KEYWORD2
