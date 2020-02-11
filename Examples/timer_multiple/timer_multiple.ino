@@ -16,7 +16,7 @@ void setup()
     // Set how long the pin will be on for
     builtinLED.setOnTime(5);
 
-    // Attach the timer object to the built-in LED
+    // Attach the timer object to an external LED
     externalLED.attach(LED1, MINUTES);
     // Set both off and on intervals in the arguments
     externalLED.setTimer(1, 5);
